@@ -1,10 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
-import vector_1 from "../asserts/Vectorpng.png";
-import vector_2 from "../asserts/Vectorvector-1.png";
-import vector_3 from "../asserts/Vector-1.png";
-import vector_4 from "../asserts/Vector.png";
 const Sidebar = () => {
   const navigate = useNavigate();
   const logout = () => {

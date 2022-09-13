@@ -13,7 +13,9 @@ return (
   <Routes>
   <Route exact path="/" element={<Login/>}></Route>
   <Route exact path ="/signup" element={<Signup/>}></Route>
-  <Route path='/dashboard' element={<Contacts/>}></Route>
+  <Route element={<Private/>}>
+        <Route path='/dashboard' element={<Contacts/>}></Route>
+        </Route>
   </Routes>
   </BrowserRouter>
   </>
