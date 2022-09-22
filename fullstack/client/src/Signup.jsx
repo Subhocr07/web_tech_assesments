@@ -17,7 +17,7 @@ const Signup =()=>{
         e.preventDefault()
         axios({
             method:"POST",
-            url:'http://localhost:7070/signup',
+            url:'https://publish-fullstack-10x-backend.herokuapp.com/signup',
             data:data
         }).then((user)=> {
                 window.alert(user.data)

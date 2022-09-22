@@ -28,7 +28,7 @@ const Login =()=>{
             headers:{
                 // auth: localStorage.setItem('user')
             },
-            url:"http://localhost:7070/login",
+            url:"https://publish-fullstack-10x-backend.herokuapp.com/login",
             data:data
         }).then((token)=> {
             console.log('Hello',token.data)

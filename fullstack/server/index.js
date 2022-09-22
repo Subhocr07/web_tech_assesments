@@ -6,7 +6,7 @@ require('dotenv').config();
 const bcrypt = require("bcryptjs")
 const SignupModel=require("./models/SignupModal")
 const MONGOURI="mongodb+srv://Subho:2022@socialmedia.s3obl.mongodb.net/test"
-const PORT=7070;
+const PORT=process.env.PORT||7070;
 const cors = require("cors");
 server.listen(PORT,(err)=>{
     if(!err){
@@ -63,7 +63,6 @@ server.post("/login", (req, res)=> {
     }
 
     SignupModel.findOne({email:email}).then((exist)=>{
-    
         if (exist) {
             bcrypt.compare(password,exist.password).then((check)=> {
                 if (check){

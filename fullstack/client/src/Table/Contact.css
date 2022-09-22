@@ -36,3 +36,17 @@ header.contact-header-text {
 .answer {
     font-size: 2rem;
 }
+.contact-btn {
+    display: flex;
+}
+.button_class {
+    display: flex;
+    flex-direction: row;
+    column-gap: 33rem;
+    padding: 1rem;
+}
+button {
+    font-size: 2rem;
+    padding: 14px;
+    margin: 10px;
+}
