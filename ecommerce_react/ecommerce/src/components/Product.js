@@ -2,12 +2,16 @@ import React,{useState,useEffect} from 'react'
 
 const Product = () => {
     const [products,setProduct]=useState();
+    const [currentPage,setCurrentPage]=useState(1);
+    const[postPerPage]=useState(10);
 
 
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products").then(res=>res.json().then((json=>setProduct(json))))
-    },[products])
+    },[products]);
+
+    
 
 
   return (
