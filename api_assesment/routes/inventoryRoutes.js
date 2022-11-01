@@ -3,9 +3,14 @@ const express = require("express")
 const router = express.Router()
 
 router.post("/add", (req, res) => {
+    console.log(req.body)
     inventoryModal.find({ inventory_id: req.body.inventory_id }).then((data) => {
         if (data.length) {
-            const quantity=(parseInt(data[0].available_quantity))+(parseInt(req.body.available_quantity))
+           if(req.body.available_quantity<0){
+                return res.send("please input value grater then 0")
+           }else{
+            var quantity=(parseInt(data[0].available_quantity))+(parseInt(req.body.available_quantity))
+           }
             inventoryModal.updateOne({ inventory_id: req.body.inventory_id },{$set: {available_quantity:quantity}}).then((data)=>{
                 res.status(200).send("Data Added")
             }).catch((err) => {

@@ -1,6 +1,17 @@
 {
     "cSpell.words": [
+        "confirmpass",
+        "handleaction",
+        "handlepause",
+        "handletask",
         "jewellery",
-        "totalposts"
+        "maindata",
+        "Mainlist",
+        "noaction",
+        "setbutton",
+        "Settimetaken",
+        "todolistmodel",
+        "totalposts",
+        "updatetask"
     ]
 }
