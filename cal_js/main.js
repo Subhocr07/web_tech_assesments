@@ -108,7 +108,7 @@ function clearInput (e) {
     return;
   }
 
-  operation = operation.slice(0, -1);
+  operation = "";
   input.innerHTML = operation;
 
 }
