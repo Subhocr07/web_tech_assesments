@@ -4,7 +4,14 @@ function calculate() {
 	weight = document.getElementById("weight").value;
 	height = document.getElementById("height").value;
     age = document.getElementById("age").value;
-	error = "Please enter some values";
+	error = "Please enter some  value greater than Zero";
+	if (age<0) {
+		document.getElementById("inputError").innerHTML = "Negative Values not Allowed";
+	}else if(weight < 0){
+        document.getElementById("inputError").innerHTML = "Negative Values not Allowed";
+    }else{
+        document.getElementById("inputError").innerHTML = "Negative Values not Allowed";
+    }
 	height /= 100;
 	height *= height;
 	bmi = weight/height;
@@ -21,21 +28,14 @@ function calculate() {
 	}
 	
 
-	if (weight === 0 ) {
+	if (weight === 0 || weight<0 ) {
 		document.getElementById("results").innerHTML = error;
-	} else if (height === 0){
+	} else if (height === 0 || height<0){
 		document.getElementById("results").innerHTML = error;
 	}
 	 else {
 
 		document.getElementById("results").innerHTML = measure;
 	}
-	if (age<0) {
-		document.getElementById("inputError").innerHTML = "Negative Values not Allowed";
-	}else if(weight < 0){
-        document.getElementById("inputError").innerHTML = "Negative Values not Allowed";
-    }else{
-        document.getElementById("inputError").innerHTML = "Negative Values not Allowed";
-    }
 
 }
