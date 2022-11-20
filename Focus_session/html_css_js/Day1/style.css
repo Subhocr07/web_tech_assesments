@@ -1,0 +1,35 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+}
+#container {
+    display: grid;
+    grid-gap: 5px;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4,1fr);
+    /* padding: 0px; */
+}
+
+.single_product_container {
+    height: 30vh;
+    width: 25vw;
+    padding: 0px;
+    background-color: antiquewhite;
+}
+.product_header {
+    display: flex;
+    justify-content: space-around;
+}
+.product_img {
+    display: flex;
+    justify-content: center;
+}
+.product_description {
+    display: flex;
+    justify-content: space-around;
+}
+img {
+    height: 17vh;
+    width: 17vw;
+}

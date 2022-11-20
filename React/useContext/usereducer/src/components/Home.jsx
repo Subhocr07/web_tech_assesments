@@ -8,7 +8,7 @@ const Home = () => {
     <div className="product">
       {products?.map((item)=>{
         return(
-          <span>{item.title}</span>
+          <div key={item.id}><span>{item.title}</span></div>
         )
         })}
     </div>
