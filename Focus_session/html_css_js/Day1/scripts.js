@@ -13,8 +13,8 @@ async function getUser() {
     return `
       <div class="single_product_container">
         <div class="product_header">
-          <p>Rating: ${user.rating.rate}</p>
-          <p>cart</p>
+          <p id="rating" >Rating: ${user.rating.rate}</p>
+          <p id="cart" >cart</p>
         </div>
         <div class="product_img">
           <img

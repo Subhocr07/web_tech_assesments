@@ -1,10 +1,8 @@
-
-//set reducer for fetch data
 const reducer=(state,action) => {
     switch (action.type) {
         case 'FETCH_SUCCESS':
             return{
-                // ...state,
+                ...state,
                 loading:false,
                 post:action.payload,
                 error:''
@@ -15,6 +13,11 @@ const reducer=(state,action) => {
                     post:{},
                     error:'something went wrong'
                 }
+            
+            case 'a':
+            return{
+
+            }
     
         default:
            return state

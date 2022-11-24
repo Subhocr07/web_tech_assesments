@@ -1,0 +1,10 @@
+.filter{
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction:column;
+    width:10%;
+    margin: 10px;
+    height: 86vh;
+}
