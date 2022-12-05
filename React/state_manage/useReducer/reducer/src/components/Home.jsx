@@ -13,7 +13,7 @@ const Home = () => {
         {
           post?.map((prod)=>{
             return (
-              <Singleproduct product={prod}  />
+              <Singleproduct product={prod} key={prod.id}  />
             )
           })
         }
