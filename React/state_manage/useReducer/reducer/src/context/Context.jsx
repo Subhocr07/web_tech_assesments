@@ -15,7 +15,7 @@ const Context = ({children}) => {
 
     useEffect(() => {
         axios
-          .get("https://jsonplaceholder.typicode.com/posts")
+          .get("https://fakestoreapi.com/products")
           .then((response) => {
             dispatch({ type: "FETCH_SUCCESS", payload: response.data});
           })

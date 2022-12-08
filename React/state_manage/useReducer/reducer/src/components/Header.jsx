@@ -3,9 +3,11 @@ import {Container,Navbar,FormControl,Nav,Badge} from "react-bootstrap"
 import Dropdown from 'react-bootstrap/Dropdown';
 import {RiShoppingCart2Fill} from 'react-icons/ri'
 import {Link} from "react-router-dom"
+import {Cartstate} from "../context/Context"
 
 
 const Header = () => {
+  const {state:{cart}}=Cartstate()
   return (
     <Navbar bg="dark" variant="dark" style={{height:80}} >
       <Container>
@@ -22,7 +24,7 @@ const Header = () => {
         <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic">
         <RiShoppingCart2Fill color='white' fontSize="25px" />
-        <Badge>{10}</Badge>
+        <Badge>{cart.length}</Badge>
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
