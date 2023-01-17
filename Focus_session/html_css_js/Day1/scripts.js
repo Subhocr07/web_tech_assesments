@@ -12,9 +12,14 @@ async function getUser() {
   const html = data.map((user) => {
     return `
       <div class="single_product_container">
+        <div class=product_image_container >
         <div class="product_header">
+          <div class="rating" >
           <p id="rating" >Rating: ${user.rating.rate}</p>
+          </div>
+          <div class="cart" >
           <p id="cart" >cart</p>
+          </div>
         </div>
         <div class="product_img">
           <img
@@ -22,12 +27,13 @@ async function getUser() {
             alt=${user.title}
           />
         </div>
+        </div>
         <div class="product_description">
-          <p>${user.title}</p>
-          <p>${user.category}</p>
+          <p id="product_title" >${user.title}</p>
+          <p id="product_category" >${user.category}</p>
         </div>
       </div>
-      `;
+      `
   });
   document
     .querySelector("#container")

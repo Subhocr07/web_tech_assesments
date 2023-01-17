@@ -7,7 +7,7 @@ const Home = () => {
   const {state:{post}}=Cartstate()
   console.log(post)
   return (
-    <div className="home" >
+    <div className="home_home" >
       <Filter/>
       <div className="productContainer" >
         {
